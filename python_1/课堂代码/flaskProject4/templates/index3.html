@@ -1,0 +1,50 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>个人信息</title>  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif; /* 设置字体为Arial或无衬线字体 */  
+            background-color: #f9f9f9; /* 设置背景颜色为浅灰色 */  
+            margin: 0;  
+            padding: 20px;  
+            display: flex;  
+            flex-direction: column;  
+            align-items: center;  
+        }  
+  
+        h1 {  
+            color: blue; /* 设置标题颜色蓝色 */  
+            margin-bottom: 10px; /* 设置标题之间的间距 */  
+            text-align: center; /* 标题文本居中 */  
+        }  
+  
+        .info {  
+            display: flex;  
+            flex-direction: column;  
+            align-items: center;  
+        }  
+  
+        .info h1 {  
+            font-size: 1.2em; /* 设置信息标题的字体大小 */  
+            margin: 5px 0; /* 设置信息标题的上下间距 */  
+        }  
+  
+        .info span {  
+            font-weight: bold; /* 设置信息内容的字体加粗 */  
+        }  
+    </style>  
+</head>  
+<body>  
+    <h1>个人信息</h1>  
+    <div class="info">  
+        <h1>姓名：</h1>  
+        <span>{{user.name}}</span>
+        <h1>年龄：</h1>  
+        <span>{{user.age}}</span>
+        <h1>爱好：</h1>
+        <span>{{user.hobby}}</span>
+    </div>  
+</body>  
+</html>

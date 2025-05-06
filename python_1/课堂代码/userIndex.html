@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>User List</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>用户管理</h1>
+    <ul id="user-list">
+    </ul>
+
+    <script>
+        // 获取用户列表
+        $.ajax({
+            url: 'http://127.0.0.1:5000/user/queryAll_2',
+            method: 'GET',
+            success: function(data) {
+                 // 这里可以将返回的数据展示到页面上，例如可以使用一个表格来展示
+                const tableBody = $('#user-table tbody'); // 获取表格的 tbody 元素
+                // 解析 JSON 字符串为对象
+                const users = JSON.parse(data);
+                // 遍历返回的数据，并生成表格行
+                for (const user of users) {
+                  const row = `
+                    <tr>
+                      <td>${user.name}</td>
+                      <td>${user.age}</td>
+                      <td>${user.hobby}</td>
+                      <td>${user.type}</td>
+                        <td>
+                        <button id="edit-user" data-id="' + user.id + '">编辑</button>
+                        <button id="delete-user" data-id="' + user.id + '">删除</button>
+                        </td>
+                    </tr>
+                  `;
+                  tableBody.append(row); // 将行添加到表格中
+                }
+            }
+        });
+    </script>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<table id="user-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Hobby</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+   <br> -------------------------------------------<br>
+
+</body>
+</html>
