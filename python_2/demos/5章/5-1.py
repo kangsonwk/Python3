@@ -11,6 +11,4 @@ class Student:
 stu = Student("xm", 18)
 print(stu.name, stu.age)
 
-# del stu     # 手动回收对象stu
-
-
+del stu  # 手动回收对象stu

@@ -17,10 +17,10 @@ class Student:
     def __init__(self, name, age):
         print("init...")
         print(id(self))
-        print(self.__dict__)
+
         self.name = name
         self.age = age
-
+        print(self.__dict__)
 
     def __new__(cls, *args, **kwargs):
         print("new...")

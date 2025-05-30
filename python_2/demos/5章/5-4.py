@@ -16,10 +16,10 @@
 # print(stu)
 
 
+from objprint import objprint, add_objprint
 
-from objprint import objprint
 
-
+@add_objprint
 class Student:
     def __init__(self, name, age):
         self.name = name
@@ -28,4 +28,4 @@ class Student:
 
 stu = Student("jack", 10)
 print(stu)
-objprint(stu)
+# objprint(stu)

@@ -19,7 +19,8 @@ class Foo:
     def __init__(self):
         pass
 
+
 f = Foo()
-f.a = 100       # 没问题
+f.a = 100  # 没问题
 print(f.a)
-f.v = 100       # 报错 AttributeError: 'Foo' object has no attribute 'v'
+f.v = 100  # 报错 AttributeError: 'Foo' object has no attribute 'v'
